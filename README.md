@@ -1,86 +1,89 @@
-# AnimatedContainer Demo
+# A Flutter AnimatedContainer Demonstration
 
-**One-line description:** An expandable profile card that demonstrates Flutter's AnimatedContainer widget with smooth property transitions.
+## Summary
+An expandable profile that serves as a Flutter example of how to animate properties of an AnimatedContainer.
 
-## Overview
+## Description
+Using an AnimatedContainer in a real-world example to create an expandable profile card, which is consistent with how social media apps and contact management systems work.
 
-This Flutter app showcases the **AnimatedContainer** widget through a real-world use case: an interactive profile card that expands and collapses when tapped, similar to what you'd find in social media or contact applications.
+## Important Properties Demonstrated
 
-## Three Key Properties Demonstrated
+### Height
+- Function: Determines the height of the AnimatedContainer.
+- Implementation: Animate container from 150 (collapsed) to 300 (expanded).
+- Visual effect: Display additional detail to user.
 
-### 1. **height**
-- **What it does:** Controls the vertical size of the container
-- **In this demo:** Smoothly animates from 150 pixels (collapsed) to 300 pixels (expanded)
-- **Visual impact:** The card grows taller to reveal additional profile information
+### Decoration
+- Function: Determine how the AnimatedContainer visually looks, for example, with border styles.
+- Implementation: Starting with a border radius of 20, animate to a border radius of 50 and change the color from blue to dark purple.
+- Visual effect: Smooth transition when the animated container color changes and becomes more circular.
 
-### 2. **decoration (BoxDecoration with borderRadius)**
-- **What it does:** Defines the container's visual styling including borders and corner rounding
-- **In this demo:** The border radius animates from 20 to 50, and the color changes from blue to deep purple
-- **Visual impact:** The card's corners become much more rounded and the color smoothly transitions
+### Padding
+- Function: Determines the amount of space between the border of the AnimatedContainer and the content that is already in the AnimatedContainer.
+- Implementation: Animate from EdgeInsets.all(20) to EdgeInsets.all(30).
+- Visual effect: Provide more spacing, resulting in ease of viewing content within the AnimatedContainer.
 
-### 3. **padding**
-- **What it does:** Sets the internal spacing between the container's edges and its content
-- **In this demo:** Animates from EdgeInsets.all(20) to EdgeInsets.all(30)
-- **Visual impact:** Content gets more breathing room as the card expands, improving visual comfort
+## How to Get Started
 
-## How to Run
+## Setup Requirements:
+- Flutter SDK ([Install Documentation](https://docs.flutter.dev/get-started/install)) installed
+- IDE (Visual Studio Code, Android Studio, or IntelliJ Idea)
+- Emulation of Android/iOS, physical device, or simulator available
 
-### Prerequisites
-- Flutter SDK installed ([Install Flutter](https://docs.flutter.dev/get-started/install))
-- A code editor (VS Code, Android Studio, or IntelliJ IDEA)
-- An Android/iOS emulator or physical device
+## To perform this demo:
+1. Clone source code:
+```bash
+git clone https://github.com/Songa7273/Widget.git
+cd Widget
+```
+2. Pull dependencies:
+```bash
+flutter pub get
+```
+3. Launch app:
+```bash
+flutter run
+```
+4. Click on the profile card to demonstrate an `AnimatedContainer` effect.
 
-### Steps
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/Songa7273/Widget.git
-   cd Widget
-   ```
+Screenshot
 
-2. Install dependencies:
-   ```bash
-   flutter pub get
-   ```
 
-3. Run the app:
-   ```bash
-   flutter run
-   ```
+![alt text](image-2.png)
 
-4. Tap the profile card to see the AnimatedContainer in action!
 
-## Screenshot
 
-![AnimatedContainer Demo Screenshot](screenshot.png)
+_The picture demonstrates both the collapsed state and extended state profile cards through an `AnimatedContainer`._
 
-*The profile card in both collapsed and expanded states, showing the smooth AnimatedContainer transitions.*
+# Code Layout
 
-## Code Structure
-
-- `lib/main.dart` - Contains the complete demo implementation
-- The `AnimatedContainer` widget is located in the `_ProfileCardDemoState` build method
-- Key properties (height, decoration, padding) are controlled by the `_isExpanded` boolean state
+lib/main.dart holds all code for this demonstration.
+The `AnimatedContainer` is created in the `_ProfileCardDemoState` build() method of that file.
+The attributes that will utilize the `AnimatedContainer` – height, decoration and padding – are managed via a single boolean state called `_isExpanded`.
 
 ## Features
 
-- ✅ Smooth animation with 500ms duration and easeInOut curve
-- ✅ Real-world expandable profile card UI pattern
-- ✅ Clear demonstration of three AnimatedContainer properties
-- ✅ Simple, easy-to-understand code (under 150 lines)
-- ✅ Quick reference showing animated property values
+- ✅ Smooth, 500 ms animated transition time with an easeInOut animation curve.
+- ✅ A realistic example of expanding profile card UI pattern.
+- ✅ A clear demonstration of three attributes of `AnimatedContainer`.
+- ✅ Simple and easy to read (less than 150 lines of code).
+- ✅ A reference showing the change of animated attribute values.
 
-## Learning Points
+## Learning
 
-- **AnimatedContainer** automatically animates between property values when they change
-- The `duration` property controls how long the animation takes
-- The `curve` property defines the animation's acceleration pattern
-- Any property that can be lerped (linearly interpolated) can be animated
-- Combining multiple animated properties creates rich, fluid interactions
+- The **AnimatedContainer** widget automatically animates any property that has a duration when the value for that property changes.
+- Duration property is how long an animation will run for.
+- Animation curve property defines how fast or slow an animation will increase or decrease in speed while running.
+- Any type of property that can be interpolated linearly can be animated.
+- Using all animated properties together makes a fully functional and fluid experience. 
 
 ## Author
 
-Created for Flutter widget demonstration assignment.
+Created as a Flutter widget assignment.
 
 ## License
 
-This project is open source and available for educational purposes.
+This project is open source and available for educational use.
+
+
+
